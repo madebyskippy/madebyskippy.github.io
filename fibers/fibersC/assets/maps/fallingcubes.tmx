@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="26" height="15" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tiles" tilewidth="64" tileheight="64">
+  <image source="../tiles/tiles.png" width="512" height="1024"/>
+ </tileset>
+ <layer name="background" width="26" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzt06EWglAURNH3awJFoIgUgaJSRIpIAfl4Tpxyk/c1wg4TZ9aaKoRwRY0TEqTInHODFh3OyFGgdM4PPNHjgkr6eeYBb4wRdrvJXhO+mCPsdpe9VvywRdjtJXtZPTuH/JG9rJ69Q15kL6vn6JCt/2jP2SFb/9Gem0M+/vP/f7RPzP/sMjmGwA==
+  </data>
+ </layer>
+ <layer name="ground" width="26" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4Aw4ARiZiBmgtI8aOIsA+SuUTB0ACitcAExNxqbB58mMoAgEAsBsTAaW5jKdkkCsRQQS6PZAxMjZBcoDHSAWBOItYBYG43PBcUwc4XQ7DQEYiMgNkZSyw2VR+aD5E3Q1CPz0d0NogHj7QaH
+  </data>
+ </layer>
+ <objectgroup name="ground" width="26" height="15">
+  <object type="Platform" x="4" y="709" width="246" height="248">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+  <object type="Platform" x="1479" y="645" width="179" height="183">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+  <object type="Platform" x="258" y="836" width="122" height="123">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="knit needles" width="26" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDFYgBsTidLBHDojl0cT46GDvYASsaHzeAXHFwAIAH3cAiw==
+  </data>
+ </layer>
+ <objectgroup name="bridge horizontal" width="26" height="15">
+  <object name="bridge" type="Rectangle" x="256" y="671" width="28" height="28">
+   <properties>
+    <property name="initHeight" value="0"/>
+    <property name="isBuildable" value="true"/>
+    <property name="isClimbable" value="false"/>
+    <property name="isSolid" value="true"/>
+    <property name="maxHeight" value="8"/>
+    <property name="minHeight" value="0"/>
+    <property name="rotation" value="90"/>
+    <property name="toolKey" value="0"/>
+    <property name="width" value="0.5"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="knit" width="26" height="15">
+  <object name="0" type="Tool" x="197" y="647" width="53" height="53">
+   <properties>
+    <property name="prebuilt" value="true"/>
+    <property name="toolKey" value="0"/>
+   </properties>
+  </object>
+  <object name="1" type="Tool" x="834" y="775" width="60" height="55">
+   <properties>
+    <property name="initHeight" value="0"/>
+    <property name="isBuildable" value="true"/>
+    <property name="isClimbable" value="true"/>
+    <property name="isSolid" value="false"/>
+    <property name="maxHeight" value="8"/>
+    <property name="minHeight" value="0"/>
+    <property name="prebuilt" value="false"/>
+    <property name="rotation" value="0"/>
+    <property name="toolKey" value="1"/>
+    <property name="width" value="0.5"/>
+   </properties>
+  </object>
+  <object name="0" type="ToolYarnBall" x="138" y="645" width="55" height="54">
+   <properties>
+    <property name="toolKey" value="0"/>
+   </properties>
+  </object>
+  <object name="1" type="ToolYarnBall" x="898" y="776" width="55" height="54">
+   <properties>
+    <property name="toolKey" value="1"/>
+   </properties>
+  </object>
+  <object type="Platform" x="-53" y="363" width="60" height="374">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+  <object type="Checkpoint" x="1548" y="523" width="110" height="115">
+   <properties>
+    <property name="checkpointName" value="goal"/>
+    <property name="progress" value="next"/>
+    <property name="yarn" value="true"/>
+   </properties>
+  </object>
+  <object name="2 - rect" type="Rectangle" x="1149" y="838" width="124" height="56">
+   <properties>
+    <property name="initHeight" value="0"/>
+    <property name="isBuildable" value="true"/>
+    <property name="isClimbable" value="false"/>
+    <property name="isSolid" value="true"/>
+    <property name="maxHeight" value="1"/>
+    <property name="minHeight" value="0"/>
+    <property name="prebuilt" value="false"/>
+    <property name="rotation" value="0"/>
+    <property name="toolKey" value="2"/>
+    <property name="width" value="2"/>
+   </properties>
+  </object>
+  <object name="2" type="Tool" x="1094" y="775" width="53" height="53">
+   <properties>
+    <property name="prebuilt" value="true"/>
+    <property name="toolKey" value="2"/>
+   </properties>
+  </object>
+  <object name="2 yarn ball" type="ToolYarnBall" x="1037" y="774" width="55" height="54">
+   <properties>
+    <property name="toolKey" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="platforms" width="26" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoQAAAGGAAB
+  </data>
+ </layer>
+ <objectgroup name="cubes" width="26" height="15">
+  <object type="Platform" x="259" y="771" width="59" height="57">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+  <object type="Platform" x="387" y="899" width="444" height="246">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+  <object type="Platform" x="838" y="837" width="819" height="117">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+  <object type="Rectangle" x="587" y="263" width="32" height="50">
+   <properties>
+    <property name="bodyType" value="dynamic"/>
+    <property name="isPullable" value="true"/>
+    <property name="isSolid" value="true"/>
+    <property name="mass" value="50"/>
+   </properties>
+  </object>
+  <object type="Rectangle" x="704" y="258" width="32" height="55">
+   <properties>
+    <property name="bodyType" value="dynamic"/>
+    <property name="isPullable" value="true"/>
+    <property name="isSolid" value="true"/>
+    <property name="mass" value="50"/>
+   </properties>
+  </object>
+  <object type="Rectangle" x="993" y="261" width="32" height="54">
+   <properties>
+    <property name="bodyType" value="dynamic"/>
+    <property name="isPullable" value="true"/>
+    <property name="isSolid" value="true"/>
+    <property name="mass" value="50"/>
+   </properties>
+  </object>
+  <object type="Platform" x="902" y="329" width="178" height="49">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="platforms" width="26" height="15">
+  <object type="Platform" x="516" y="324" width="310" height="54">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="checkpoints" width="26" height="15">
+  <object type="Spawn" x="41" y="475" width="49" height="47"/>
+ </objectgroup>
+ <objectgroup name="boundaries" width="26" height="15">
+  <object type="Platform" x="1653" y="265" width="60" height="374">
+   <properties>
+    <property name="rigidBody" value="static"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Fibers: Beta</title>
+    <link rel="shortcut icon" href="yarnball.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src='fibers.js'></script>
+	<script src="jslib/debug.js"></script>
+    <script src="jslib/webgl/turbulenzengine.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/base_template.css">-->
+    <link rel="stylesheet" type="text/css" href="css/dynamicui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.2.custom.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="home">
+        <a href="index.html"><img id="homeBtn" src="titlefibers.png" height="150%"></a>
+    </div>
+    <div class="about">
+        <span id="aboutBtn"><a href="about.html">about</a></span>
+    </div>
+</div>
+<div class="main" id="game">
+    <h1>Beta Build, 5/1/2014</h1>
+    <canvas id="canvas" width="1280px" height="720px"></canvas>
+    <div id="dynamicui" class="dynamicui">
+        <div class="html-control">Level Name:
+            <input type="text" id="levelNameinput" class="control-textfield" value="dynamicTest">
+        </div>
+
+        <div class="html-control control-output-pair">Player Jump Speed:
+            <input type="text" id="playerJumpSpeedSliderinput" size="2" value="0.1" class="control-textfield">
+        </div>
+        <div class="html-control control-slider">
+            <div id="playerJumpSpeedSlider" class="sliderinput"></div>
+        </div>
+    </div>
+
+    <script>
+        // there is probably a better way to do this
+        var canvas = document.getElementById("canvas");
+        window.TurbulenzEngine = window.WebGLTurbulenzEngine.create({canvas:canvas});
+    </script>
+
+    <script src="scripts/jquery-1.7.1.js"></script>
+    <script src="scripts/jquery-ui-1.8.2.custom.min.js"></script>
+    <script src="scripts/duiserver.js"></script>
+    <script src="scripts/htmlcontrols.js"></script>
+
+    <script src="fibersB/jslib/vmath.js"></script>
+    <script src="fibersB/jslib/draw2d.js"></script>
+    <script src="fibersB/jslib/physics2ddevice.js"></script>
+    <script src="fibersB/jslib/physics2ddebugdraw.js"></script>
+    <script src="fibersB/jslib/boxtree.js"></script>
+    <script src="fibersB/jslib/soundmanager.js"></script>
+    <script src="fibersB/jslib/webgl/graphicsdevice.js"></script>
+    <script src="fibersB/jslib/webgl/mathdevice.js"></script>
+    <script src="fibersB/jslib/webgl/physicsdevice.js"></script>
+    <script src="fibersB/jslib/webgl/inputdevice.js"></script>
+    <script src="fibersB/jslib/webgl/sounddevice.js"></script>
+
+    <script src="fibersB/build/fibers.js"></script>
+
+</div>
+<div class="footer">(c) 2014</div>
+</body>
+</html>

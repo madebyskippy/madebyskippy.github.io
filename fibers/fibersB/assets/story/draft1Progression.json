@@ -1,0 +1,49 @@
+{
+  "start": {
+      "stateType" : "CutsceneState",
+      "map" : "cutsceneIntroCreate",
+      "nextName" : "teach"
+    },
+
+  "teach": {
+      "stateType" : "PlayState",
+      "map" : "instructions",
+      "nextName" : "cut1"
+  },
+
+  "cut1": {
+    "stateType" : "CutsceneState",
+    "map" : "cutsceneIntroFight",
+    "nextName" : "firstLev"
+  },
+
+  "firstLev": {
+    "stateType" : "PlayState",
+    "map" : "tutorial",
+    "nextName" : "secondLev"
+  },
+
+  "secondLev": {
+    "stateType" : "PlayState",
+    "map" : "transform",
+    "nextName" : "thirdLev"
+  },
+
+  "thirdLev": {
+    "stateType" : "PlayState",
+    "map" : "fallingcubes",
+    "nextName" : "fourthLev"
+  },
+
+  "fourthLev": {
+    "stateType" : "PlayState",
+    "map" : "upcube",
+    "nextName" : "endCut"
+  },
+
+  "endCut": {
+      "stateType" : "CutsceneState",
+      "map" : "endCut",
+      "nextName" : ""
+  }
+}

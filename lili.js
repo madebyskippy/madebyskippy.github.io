@@ -7,34 +7,34 @@
 $(document).ready(function(){
 
     $('.thumb1').html('<div class="thumb">'+
-            '<a href="cityexplorer.html"><img src="imgs/potion_t.png"><br><br>City Explorer</a>'+
+            '<a href="reflectionpond.html"><img src="imgs/potion/msk_t.png"><br><br>Reflection Pond</a>'+
         '</div>'+
         '<div class="thumb middle">'+
             '<a href="projection.html"><img src="imgs/potion/guitar_t.png"><br><br>Dynamic Projection</a>'+
         '</div>'+
         '<div class="thumb">'+
-            '<a href="videowheel.html"><img src="imgs/potion/vid_t.png"><br><br>Video Wheel</a>'+
+            '<a href="cityexplorer.html"><img src="imgs/potion_t.png"><br><br>City Explorer</a>'+
         '</div>');
     $('.thumb2').html('<div class="thumb">'+
+            '<a href="magicbook.html"><img src="imgs/potion/ajhs_t.jpg"><br><br>Magic Book</a>'+
+        '</div>'+
+        '<div class="thumb middle">'+
+            '<a href="videowheel.html"><img src="imgs/potion/vid_t.png"><br><br>Video Wheel</a>'+
+        '</div>'+
+        '<div class="thumb">'+
             '<a href="gardengames.html"><img src="imgs/gardengames_t.png"><br><br>Garden Games</a>'+
+        '</div>');
+    $('.thumb3').html('<div class="thumb">'+
+            '<a href="springsprong.html"><img src="imgs/springsprong_t.png"><br><br>Spring Sprong</a>'+
         '</div>'+
         '<div class="thumb middle">'+
             '<a href="circlecycle.html"><img src="imgs/circlecycle_t.png"><br><br>Circle Cycle</a>'+
         '</div>'+
         '<div class="thumb">'+
-            '<a href="springsprong.html"><img src="imgs/springsprong_t.png"><br><br>Spring Sprong</a>'+
-        '</div>');
-    $('.thumb3').html('<div class="thumb">'+
-            '<a href="feed.html"><img src="imgs/feed_t.png"><br><br>FEED</a>'+
-        '</div>'+
-        '<div class="thumb middle">'+
-            '<a href="districtlines.html"><img src="imgs/districtlines_t.png"><br><br>District Lines</a>'+
-        '</div>'+
-        '<div class="thumb">'+
             '<a href="space.html"><img src="imgs/space_t.png"><br><br>Space</a>'+
         '</div>');
     $('.thumb4').html('<div class="thumb">'+
-            '<a href="bunrun.html"><img src="imgs/bunrun_t.png"><br><br>Bun Run</a>'+
+            '<a href="districtlines.html"><img src="imgs/districtlines_t.png"><br><br>District Lines</a>'+
         '</div>'+
         '<div class="thumb middle">'+
             '<a href="proto.html"><img src="imgs/proto_t.png"><br><br>prototypes</a>'+

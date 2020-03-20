@@ -48,14 +48,35 @@ function setup() {
     wo.addImage(loadImage('assets/windowA_empty.png'));
     wo.addAnimation('empty','assets/windowA_empty.png');
     wo.addAnimation('outline','assets/windowA_outline.png');
+    wo.depth=1;
 
     w = createSprite(windowPositions[i][0],windowPositions[i][1]);  
     w.addImage(loadImage('assets/windowA_1.png'));
     w.addAnimation('empty','assets/windowA_1.png');
     w.addAnimation('count','assets/windowA_2.png');
     w.addAnimation('hover','assets/windowA_3.png');
+    w.depth=2;
 
-    windowArray[i] = new buildingWindow(1,w,wo);
+    b = createSprite(windowPositions[i][0]+50,windowPositions[i][1]-50);
+    b.addImage(loadImage('assets/bubble0.png'));
+    b.addAnimation('empty','assets/bubble0.png');
+    banim = b.addAnimation('grow','assets/bubble1.png','assets/bubble2.png',
+                            'assets/bubble3.png','assets/bubble4.png',
+                            'assets/bubble4.png','assets/bubble4.png',
+                            'assets/bubble4.png','assets/bubble4.png',
+                            'assets/bubble4.png','assets/bubble4.png',
+                            'assets/bubble4.png','assets/bubble4.png',
+                            'assets/bubble4.png','assets/bubble4.png',
+                            'assets/bubble3.png','assets/bubble2.png',
+                            'assets/bubble1.png','assets/bubble0.png');
+    banim.looping=false;
+    b.depth=3;
+
+    var startCounted = false;
+    if (random()<0.1){
+      startCounted=true;
+    }
+    windowArray[i] = new buildingWindow(1,w,wo,b,startCounted);
   }
 
   thePublic = createSprite(400,410);
@@ -87,21 +108,27 @@ function draw() {
 }
 
 class buildingWindow{
-  constructor(t,s,o){
+  constructor(t,s,o,b,startCounted){
     //variables
     this.type = t;
     this.windowSprite = s;
     this.windowOutline = o;
+    this.bubble=b;
 
     this.windowSprite.mouseActive = true;
 
-    this.isCounted = false;
+    this.isCounted = startCounted;
+    if (startCounted){
+      this.windowSprite.changeAnimation('count');
+      numCounted++;
+    }
 
     //events
     this.windowSprite.onMousePressed = function(){
       this.isCounted = !this.isCounted;
       if (this.isCounted){
         this.changeAnimation('count');
+        b.changeAnimation('grow');
         numCounted = min(numCounted+1,numTotal);
       }else{
         this.changeAnimation('empty');

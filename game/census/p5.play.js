@@ -751,6 +751,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   var push = pInstBind('push');
   var pop = pInstBind('pop');
   var colorMode = pInstBind('colorMode');
+  var tint = pInstBind('tint');
   var noStroke = pInstBind('noStroke');
   var rectMode = pInstBind('rectMode');
   var ellipseMode = pInstBind('ellipseMode');
@@ -1683,13 +1684,26 @@ function Sprite(pInst, _x, _y, _w, _h) {
   {
     if(currentAnimation !== '' && animations)
     {
-      if(animations[currentAnimation])
+      if(animations[currentAnimation]) {
+        if(this.tint) {
+          push();
+          tint(this.tint);
+        }
         animations[currentAnimation].draw(0, 0, 0);
+        if(this.tint) {
+          noTint();
+          pop();
+        }
+      }
     }
     else
     {
+      var fillColor = this.shapeColor;
+      if (this.tint) {
+        fillColor = lerpColor(color(fillColor), color(this.tint), 0.5);
+      }
       noStroke();
-      fill(this.shapeColor);
+      fill(fillColor);
       rect(0, 0, this._internalWidth, this._internalHeight);
     }
   };

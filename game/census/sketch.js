@@ -14,27 +14,31 @@ var lastAutoPopulateTime;
 //sprites
 var windowArray=[];
 var windowEmptyArray=[]; //array of indicies of empty windows
-var windowPositions=[[122,194],[185,190]
-                    ,[122,270],[185,265]
-                    ,[122,345],[185,340] //
-                    ,[300,105],[365,100]
-                    ,[300,175],[365,170]
-                    ,[300,250],[365,245]
-                    ,[300,330],[365,325] //
-                    ,[433,160],[483,155] 
-                    ,[438,235],[488,230]
-                    ,[443,310],[493,305] //
-                    ,[600, 75],[660,70] 
-                    ,[600,150],[660,145]
-                    ,[600,225],[660,220]
-                    ,[600,300],[660,295]];
+var windowPositions=[[122,224],[185,220]
+                    ,[122,290],[185,285]
+                    ,[122,365],[185,360] //
+                    ,[300,140],[365,135]
+                    ,[300,210],[365,205]
+                    ,[300,280],[365,275]
+                    ,[300,350],[365,345] //
+                    ,[438,180],[498,175] 
+                    ,[443,255],[503,250]
+                    ,[448,330],[508,325] //
+                    ,[620,110],[680,105] 
+                    ,[620,180],[680,175]
+                    ,[620,250],[680,245]
+                    ,[620,320],[680,315]];
 var windowVariations=[1,1,1,1,1,1,
                       3,3,3,3,3,3,3,3,
                       2,2,2,2,2,2,
                       1,1,1,1,1,1,1,1]; //diff colors for diff buildings
 
 var thePublic;
-var publicIncrements=5;
+var theSchool;
+var thePark;
+var theSenior;
+var mode = 1;
+var publicIncrements=6;
 
 var font, fontsize = 30;
 
@@ -144,12 +148,32 @@ function setup() {
     }
   }
 
-  thePublic = createSprite(400,410);
-  thePublic.addImage(loadImage('assets/park1.png'));
+  thePark = createSprite(400,410);
+  thePark.addImage(loadImage('assets/park1.png'));
   for (var i=0; i<publicIncrements; i++){
-    thePublic.addAnimation(i.toString(),'assets/park'+(i+1)+'.png');
+    thePark.addAnimation(i.toString(),'assets/park'+(i+1)+'.png');
   }
-  thePublic.depth = 5;
+  thePark.addAnimation('empty','assets/bubble0.png');
+  thePark.depth = 5;
+
+  theSchool = createSprite(400,410);
+  theSchool.addImage(loadImage('assets/school1.png'));
+  for (var i=0; i<publicIncrements; i++){
+    theSchool.addAnimation(i.toString(),'assets/school'+(i+1)+'.png');
+  }
+  theSchool.addAnimation('empty','assets/bubble0.png');
+  theSchool.depth = 5;
+  theSchool.changeAnimation('empty');
+
+  theSenior = createSprite(400,410);
+  theSenior.addImage(loadImage('assets/senior1.png'));
+  for (var i=0; i<publicIncrements; i++){
+    theSenior.addAnimation(i.toString(),'assets/senior'+(i+1)+'.png');
+  }
+  theSenior.addAnimation('empty','assets/bubble0.png');
+  theSenior.depth = 5;
+
+  theSenior.changeAnimation('empty');
 
   lastClickTime=millis();
   lastAutoPopulateTime=millis();
@@ -179,7 +203,13 @@ function draw() {
     }
   }
   currentProgress=progressInt;
-  thePublic.changeAnimation(progressInt.toString());
+  if (mode == 1){
+    thePark.changeAnimation(progressInt.toString());
+  }else if (mode ==2){
+    theSchool.changeAnimation(progressInt.toString());
+  }else if (mode == 3){
+    theSenior.changeAnimation(progressInt.toString());
+  }
 
   drawSprites();
 
@@ -204,6 +234,21 @@ function draw() {
       windowArray[windowEmptyArray[floor(random(0,windowEmptyArray.length))]].clicked();  
       lastAutoPopulateTime=millis();
     }
+  }
+
+  //mode change
+  if(keyWentDown('1')){
+    mode = 1;
+    theSchool.changeAnimation('empty');
+    theSenior.changeAnimation('empty');
+  }if (keyWentDown('2')){
+    mode = 2;
+    thePark.changeAnimation('empty');
+    theSenior.changeAnimation('empty');
+  }if (keyWentDown('3')){
+    mode = 3;
+    thePark.changeAnimation('empty');
+    theSchool.changeAnimation('empty');
   }
 }
 

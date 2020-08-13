@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<style>
+	    body {
+	        background: #ffffff;
+	        font-family: sans-serif;
+	    }
+	     #container {
+	         width: 600px;
+	         height: 600px;
+	         margin: auto;
+	         padding-top: 4%;
+	         text-align: center;
+	     }
+	    canvas {
+
+	    }
+	</style>
+
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.play.js"></script>
+    <script src="lib/p5.dom.min.js"></script>
+    <script src="lib/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <style> body {padding: 0; margin: 0;} </style>
+</head>
+<body>
+	<div id="container">
+		<big><big>
+		<form style="display:inline-block;">
+			<select id ="A" name="Value A">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6" selected="selected">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="x">?</option>
+			</select>
+		</form> &nbsp;
+		<form style="display:inline-block;">
+			<select id="op" name="operator">
+				<option value="1">x</option>
+				<option value="2">/</option>
+				<option value="3" selected="selected">-</option>
+				<option value="4">+</option>
+			</select>
+		</form>&nbsp;
+		<form style="display:inline-block;">
+			<select id="B" name="Value B">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="x" selected="selected">?</option>
+			</select>
+		</form>&nbsp;
+		<button type="button" onclick="enterEquation()">Try it!</button>
+		</big></big>
+		<br><br>
+		<div id="game">
+		</div>
+	</div>
+</body>
+</html>

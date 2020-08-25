@@ -56,10 +56,10 @@ function equation(x){
   var opstring = "";
   if (operation == "1"){
     result = one*two;
-    opstring = "x";
+    opstring = "&times;";
   }else if (operation == "2"){
     result= one / two;
-    opstring = "/";
+    opstring = "&divide;";
   }else if (operation == "3"){
     result = one-two;
     opstring = "-";

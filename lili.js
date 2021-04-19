@@ -19,28 +19,21 @@ $(document).ready(function(){
             '<a href="magicbook.html"><img src="imgs/potion/ajhs_t.jpg"><br><br>Magic Book</a>'+
         '</div>'+
         '<div class="thumb middle">'+
-            '<a href="videowheel.html"><img src="imgs/potion/vid_t.png"><br><br>Video Wheel</a>'+
+            '<a href="gardengames.html"><img src="imgs/gardengames_t.png"><br><br>Garden Games</a>'+
         '</div>'+
         '<div class="thumb">'+
-            '<a href="gardengames.html"><img src="imgs/gardengames_t.png"><br><br>Garden Games</a>'+
+            '<a href="springsprong.html"><img src="imgs/springsprong_t.png"><br><br>Spring Sprong</a>'+
         '</div>');
     $('.thumb3').html('<div class="thumb">'+
-            '<a href="springsprong.html"><img src="imgs/springsprong_t.png"><br><br>Spring Sprong</a>'+
-        '</div>'+
-        '<div class="thumb middle">'+
-            '<a href="circlecycle.html"><img src="imgs/circlecycle_t.png"><br><br>Circle Cycle</a>'+
-        '</div>'+
-        '<div class="thumb">'+
             '<a href="space.html"><img src="imgs/space_t.png"><br><br>Space</a>'+
-        '</div>');
-    $('.thumb4').html('<div class="thumb">'+
-            '<a href="districtlines.html"><img src="imgs/districtlines_t.png"><br><br>District Lines</a>'+
         '</div>'+
         '<div class="thumb middle">'+
             '<a href="proto.html"><img src="imgs/proto_t.png"><br><br>prototypes</a>'+
         '</div>'+
         '<div class="thumb">'+
             '<a href="misc.html"><img src="imgs/basnake_t.png"><br><br>misc</a>'+
+        '</div>');
+    $('.thumb4').html('<div class="thumb">'+
         '</div>');
 
     $('.header1').html('<div class="thumb header" style="">'+
